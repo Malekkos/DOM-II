@@ -6,7 +6,7 @@ let aboutLink = document.querySelector("nav a:nth-of-type(2)")
 let blogLink = document.querySelector("nav a:nth-of-type(3)")
 let contactLink = document.querySelector("nav a:nth-of-type(4)")
 // let nav = document.querySelector("nav");
-
+let busImage = document.querySelector("img:nth-of-type(1)");
 
 homeLink.addEventListener("mouseover", event => {
   event.target.style.transition = "1.3s";
@@ -76,7 +76,20 @@ contactLink.addEventListener("mouseleave", event => {
   event.target.style.height = "0";
   event.target.style.padding = "0";
 })
-
+console.log(busImage);
+busImage.addEventListener("mouseover", event => {
+  event.target.style.transition = "1s";
+  event.target.style.marginLeft = "38rem";
+  // event.target.style.marginRight = "4rem";
+  console.log("hello");
+})
+busImage.addEventListener("mouseleave", event => {
+  event.target.style.transition = "1.6s";
+  event.target.style.marginLeft = "-20rem";
+  setTimeout(() => {
+    event.target.style.marginLeft = "0rem";
+  }, 2500)
+})
 
 
 
